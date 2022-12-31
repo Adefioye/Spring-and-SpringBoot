@@ -1,0 +1,17 @@
+package com.javakoko.learnspringframework;
+
+import com.javakoko.learnspringframework.game.GameRunner;
+import com.javakoko.learnspringframework.game.MarioGame;
+
+public class AppGamingBasicJava {
+
+	public static void main(String[] args) {
+		
+		// Create Gamerunner class and use it to run mario game
+		var marioGame = new MarioGame();
+		var gameRunner = new GameRunner(marioGame);
+		gameRunner.run();
+
+	}
+
+}

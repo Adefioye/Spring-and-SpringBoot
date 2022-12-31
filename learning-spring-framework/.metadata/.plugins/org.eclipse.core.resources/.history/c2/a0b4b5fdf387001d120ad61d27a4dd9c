@@ -1,0 +1,24 @@
+package com.javakoko.learnspringframework;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.javakoko.learnspringframework.game.GameConsole;
+import com.javakoko.learnspringframework.game.GameRunner;
+import com.javakoko.learnspringframework.game.PacmanGame;
+
+@Configuration
+public class GamingConfiguration {
+
+	@Bean
+	public GameConsole game() {
+		var game = new PacmanGame();
+		return game;
+	}
+	
+	@Bean
+	public GameRunner gameRunner(GameConsole game) {
+		var gameRunner = new GameRunner(game);
+		return gameRunner;
+	}
+}

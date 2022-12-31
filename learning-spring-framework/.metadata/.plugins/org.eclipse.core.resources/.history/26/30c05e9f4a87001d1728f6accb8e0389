@@ -1,0 +1,10 @@
+package com.javakoko.learnspringframework.game;
+
+public class GameRunner {
+	
+	MarioGame game;
+	
+	GameRunner(MarioGame game) {
+		this.game = game;
+	}
+}

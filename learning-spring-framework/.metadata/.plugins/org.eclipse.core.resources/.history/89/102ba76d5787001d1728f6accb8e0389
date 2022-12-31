@@ -1,0 +1,14 @@
+package com.javakoko.learnspringframework;
+
+
+public class App02HelloWorldSpring {
+
+	public static void main(String[] args) {
+		
+		// 1: Launch a Spring Context
+		var context = new AnnotationConfig
+		// 2: Configure the things that we want Spring to manage - @Configuration
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.javakoko.learnspringframework;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.javakoko.learnspringframework.game.GameConsole;
+import com.javakoko.learnspringframework.game.GameRunner;
+
+
+@Configuration
+@ComponentScan("com.javakoko.learnspringframework.game")
+public class GamingApplicationLauncher {
+
+	public static void main(String[] args) {
+		
+	var context = new AnnotationConfigApplicationContext(GamingApplicationLauncher.class);
+									
+	context.getBean(GameConsole.class).up();
+	
+	context.getBean(GameRunner.class).run();
+	
+	context.close();
+
+	}
+
+}

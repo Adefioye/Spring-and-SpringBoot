@@ -1,0 +1,23 @@
+package com.javakoko.learnspringframework;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.javakoko.learnspringframework.game.GameConsole;
+import com.javakoko.learnspringframework.game.GameRunner;
+import com.javakoko.learnspringframework.game.MarioGame;
+import com.javakoko.learnspringframework.game.PacmanGame;
+import com.javakoko.learnspringframework.game.SuperContraGame;
+
+public class App03GamingSpringBeans {
+
+	public static void main(String[] args) {
+		
+	var context = new AnnotationConfigApplicationContext(GamingConfiguration.class);
+									
+	context.getBean(GameConsole.class).up();;
+	
+	context.close();
+
+	}
+
+}
